@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class Teste_checaPrimo {
     @Test
     public void checaPrimo_Test(){
-        // EXERCICIO 1
+        	// EXERCICIO 1
 		// 20 Pode facilmente ser trocado por input do numero n pelo usuario
 		double n = 20;
 		// Inicializar variavel com metade do numero n (Nesse caso de teste n = 20)
@@ -36,6 +36,6 @@ public class Teste_checaPrimo {
 		int numPrimos = a + b;
 		// Testa numero de primos
 
-        Assertions.assertEquals(numPrimos, 8);
+        	Assertions.assertEquals(numPrimos, 8);
     }
 }
