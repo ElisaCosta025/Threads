@@ -1,14 +1,15 @@
-import java.util.Scanner;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-public class Teste_chechaPrimo{
-
-	public static void main(String agrs[]){
-		
-		// EXERCICIO 1
-		// Input do numero n pelo usuario
-		Scanner Scan_Num_Input = new Scanner(System.in);
-		double n = Scan_Num_Input.nextInt();
-		// Inicializar variavel com metade do numero n
+@DisplayName("Classe para teste de conversão de unidades")
+public class Teste_checaPrimo {
+    @Test
+    public void checaPrimo_Test(){
+        // EXERCICIO 1
+		// 20 Pode facilmente ser trocado por input do numero n pelo usuario
+		double n = 20;
+		// Inicializar variavel com metade do numero n (Nesse caso de teste n = 20)
 		double halfN = Math.ceil(n/2);
 
 		// Inicializar thread para checar numero de primos
@@ -33,9 +34,8 @@ public class Teste_chechaPrimo{
 
 		// Calcular numero de primos 
 		int numPrimos = a + b;
-		// Print numero de primos
-		System.out.println(numPrimos);
-		Scan_Num_Input.close();
-	}
-	
+		// Testa numero de primos
+
+        Assertions.assertEquals(numPrimos, 8);
+    }
 }
